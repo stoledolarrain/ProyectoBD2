@@ -1,0 +1,48 @@
+CREATE TABLE Usuarios (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    correo VARCHAR(100) UNIQUE NOT NULL,
+    telefono VARCHAR(15),
+    fecha_nacimiento DATE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    contrasena VARCHAR(255) NOT NULL
+);
+
+SELECT * FROM Usuarios;
+
+
+CREATE TABLE Deportes (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion TEXT
+);
+
+INSERT INTO Deportes (nombre, descripcion)
+VALUES
+('Fútbol', 'Juego en equipo con un balón'),
+('Tenis', 'Juego de raqueta en el que dos jugadores se enfrentan usando raquetas.'),
+('Natación', 'Deporte acuático que implica el movimiento del cuerpo a través del agua.'),
+('Baloncesto', 'Juego en equipo en el que dos equipos intentan anotar puntos.'),
+('Voleibol', 'Deporte en equipo en el que los jugadores golpean una pelota sobre una red.');
+
+select * from Deportes;
+
+CREATE TABLE Niveles (
+    id SERIAL PRIMARY KEY,
+    nivel VARCHAR(20) UNIQUE NOT NULL
+);
+
+
+INSERT INTO Niveles (nivel)
+VALUES
+('Básico'),
+('Intermedio'),
+('Avanzado');
+
+select * from niveles;
+
+
+
+
+
